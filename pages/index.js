@@ -52,8 +52,8 @@ export default function Home() {
 
 		// todo, update this in your project-admin-dashboard
 		// console.log(`${BUCKET_URL}/${fileName}`);
-		setUploadedFile(`${BUCKET_URL}/${fileName}`);
-		console.log(`${BUCKET_URL}/${fileName}`);
+		// setUploadedFile(`${BUCKET_URL}/${fileName}`);
+		// console.log(`${BUCKET_URL}/${fileName}`);
 		// Uploading a file
 		await axios.put(url, file, {
 			headers: {
