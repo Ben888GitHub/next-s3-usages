@@ -51,7 +51,7 @@ export default function Home() {
 			: stringifyName;
 
 		// todo, update this in your project-admin-dashboard
-		console.log(`${BUCKET_URL}/${fileName}`);
+		// console.log(`${BUCKET_URL}/${fileName}`);
 		// setUploadedFile(`${BUCKET_URL}/${fileName}`);
 		// Uploading a file
 		await axios.put(url, file, {
@@ -61,8 +61,8 @@ export default function Home() {
 				// 'Access-Control-Allow-Headers': 'Content-Type,API-Key'
 			}
 		});
-		// setUploadedFile(`${BUCKET_URL}/${fileName}`);
-		// console.log(`${BUCKET_URL}/${fileName}`);
+		setUploadedFile(`${BUCKET_URL}/${fileName}`);
+		console.log(`${BUCKET_URL}/${fileName}`);
 
 		// console.log(newData);
 		// console.log(BUCKET_URL);
