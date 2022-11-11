@@ -25,6 +25,7 @@ export default function Home() {
 		setUploadingStatus('Uploading the file to AWS S3');
 
 		// make a POST request to created earlier API route
+		//todo uncomment this
 		let { data } = await axios.post(
 			'/api/upload-file-s3',
 			{
@@ -39,7 +40,9 @@ export default function Home() {
 		);
 
 		// Fetching out an image URL
+		//todo uncomment this
 		const url = data.url;
+
 		console.log(url);
 		const stringifyName = String(file.name);
 		console.log(stringifyName);
@@ -49,7 +52,7 @@ export default function Home() {
 
 		// todo, update this in your project-admin-dashboard
 		console.log(`${BUCKET_URL}/${fileName}`);
-		setUploadedFile(`${BUCKET_URL}/${fileName}`);
+		// setUploadedFile(`${BUCKET_URL}/${fileName}`);
 		// Uploading a file
 		await axios.put(url, file, {
 			headers: {
@@ -58,8 +61,8 @@ export default function Home() {
 				// 'Access-Control-Allow-Headers': 'Content-Type,API-Key'
 			}
 		});
-		setUploadedFile(`${BUCKET_URL}/${fileName}`);
-		console.log(`${BUCKET_URL}/${fileName}`);
+		// setUploadedFile(`${BUCKET_URL}/${fileName}`);
+		// console.log(`${BUCKET_URL}/${fileName}`);
 
 		// console.log(newData);
 		// console.log(BUCKET_URL);
