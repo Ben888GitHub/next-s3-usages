@@ -5,7 +5,8 @@ const s3 = new S3({
 	region: 'ap-southeast-1',
 	accessKeyId: process.env.ACCESS_KEY,
 	secretAccessKey: process.env.SECRET_KEY,
-	signatureVersion: 'v4'
+	signatureVersion: 'v4',
+	useAccelerateEndpoint: true
 });
 
 export default async function handler(req, res) {

@@ -4,8 +4,10 @@ import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import axios from 'axios';
 
-const BUCKET_URL =
-	'https://products-mighty-images.s3.ap-southeast-1.amazonaws.com';
+// const BUCKET_URL =
+// 	'https://products-mighty-images.s3.ap-southeast-1.amazonaws.com';
+
+const BUCKET_URL = 'https://products-mighty-images.s3-accelerate.amazonaws.com';
 
 export default function Home() {
 	const [file, setFile] = useState();
